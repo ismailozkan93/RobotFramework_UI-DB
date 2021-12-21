@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.0 on win32)" generated="20211221 13:16:06.844" rpa="false" schemaversion="2">
+<suite id="s1" name="DatabaseTest" source="C:\Development\robot-scripts\first-script\Tests\DatabaseTest.robot">
+<kw name="Connect To Database" library="DatabaseLibrary" type="SETUP">
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPass}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<msg timestamp="20211221 13:16:06.956" level="INFO">Connecting using : pymysql.connect(db=mydb, user=techprodb_user, passwd=Techpro_@126, host=157.230.48.97, port=5432, charset=None) </msg>
+<msg timestamp="20211221 13:17:07.355" level="FAIL">OperationalError: (2013, 'Lost connection to MySQL server during query')</msg>
+<status status="FAIL" starttime="20211221 13:16:06.910" endtime="20211221 13:17:07.356"/>
+</kw>
+<test id="s1-t1">
+<status status="FAIL" starttime="20211221 13:17:07.357" endtime="20211221 13:17:07.360">Parent suite setup failed:
+OperationalError: (2013, 'Lost connection to MySQL server during query')</status>
+</test>
+<status status="FAIL" starttime="20211221 13:16:06.849" endtime="20211221 13:17:07.366">Suite setup failed:
+OperationalError: (2013, 'Lost connection to MySQL server during query')</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="DatabaseTest">DatabaseTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
